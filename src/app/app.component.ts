@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import { PlaceService } from './service/place.service';
 
 import { icon, Marker } from 'leaflet';
-const iconRetinaUrl = 'assets/marker-icon-2x.png';
+const iconRetinaUrl = 'assets/marker-icon-2x.png'; 
 const iconUrl = 'assets/marker-icon.png';
 const shadowUrl = 'assets/marker-shadow.png';
 const iconDefault = icon({
