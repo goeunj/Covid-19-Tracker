@@ -1,0 +1,18 @@
+<a>
+  <button class="addPlaceButton" (click)="showAddPlaceForm()">Add new place</button>
+</a>
+<br>
+<form [formGroup]="placeForm"(ngSubmit)="showReportForm()">
+    <section class="selection">
+        <label for="places">Places</label>
+        <select formcontrolName="places" id="places" (change)="selectedPlace($event.target.value)">
+            <option value="" disabled selected hidden>-Select a place to report a case-</option>
+            <option *ngFor = "let place of places; let i = index" [value]="places[i].id" [viewValue]="places[i].name">
+            {{ places[i].name }}
+            </option>
+        </select>
+    </section>
+  <a><button [disabled] = '!selected' type="submit" class="btn btn-success" (click)="showReportForm()">
+    REPORT NEW CASE
+  </button></a>
+</form>

@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(76, 105, 87);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+table {
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    width: 95%;
+    margin: 0px auto;
+    float: none;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+    height: 30px;
+    background-color: rgba(76, 105, 87, 0.664);
+    color: white;
+}
+
+.mapContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.remove {
+    width: 100%;
+    color: black;
+    border: 2px solid red;
+}
+
+.info {
+    width: 100%;
+    color: black;
+    border: 2px solid rgb(28, 121, 28);
+}

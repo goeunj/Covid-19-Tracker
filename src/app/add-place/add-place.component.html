@@ -1,0 +1,35 @@
+<br>
+<form [formGroup] = "addPlaceForm" (ngSubmit)="onSubmit()"  *ngIf="show">
+    <section>
+        <label for="placeName">Name:</label>
+        <input type="text" formControlName="placeName" class="form-control" placeholder="Enter the name of the placeName being reported.">
+        <section class="alert alert-danger"
+            *ngIf="addPlaceForm.get('placeName').hasError('required')"
+            >
+            The name of the place being reported is requiured.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="latitude">Latitude:</label>
+        <input type="number" formControlName="latitude" class="form-control" placeholder="Enter the latitude of the place you want to add.">
+        <section class="alert alert-danger"
+            *ngIf="addPlaceForm.get('placeName').touched && addPlaceForm.get('latitude').hasError('pattern')"
+            >
+            The latitude is required to add a new place.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="longitude">Longitude:</label>
+        <input type="number" formControlName="longitude" class="form-control" placeholder="Enter the Longitude of the place you want to add.">
+        <section class="alert alert-danger"
+            *ngIf="addPlaceForm.get('placeName').touched && addPlaceForm.get('longitude').hasError('pattern')"
+            >
+            The longitude is required to add a new place.
+        </section>
+    </section>
+    <br>
+    <button [disabled] = 'addPlaceForm.invalid' class="btn btn-success" type="submit">SUBMIT</button>
+</form>
+<br>

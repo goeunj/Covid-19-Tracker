@@ -1,0 +1,50 @@
+<br>
+<form [formGroup] = "addCaseForm" (ngSubmit)="onSubmit()"  *ngIf="showForm">
+    <section>
+        <label for="person">Name:</label>
+        <input type="text" formControlName="person" class="form-control" placeholder="Enter the name of the person being reported.">
+        <section class="alert alert-danger"
+            *ngIf="addCaseForm.get('person').hasError('required')"
+            >
+            The name of the person being reported is required.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="phone">Phone:</label>
+        <input type="tel" formControlName="phone" class="form-control" placeholder="Enter the phone # of the person being reported.">
+        <section class="alert alert-danger"
+            *ngIf="addCaseForm.get('person').touched && addCaseForm.get('phone').hasError('pattern')"
+            >
+            Phone # is required: ###-###-####.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="date">Date of Visit:</label>
+        <input type="text" formControlName="date" class="form-control" placeholder="yyyy-mm-dd">
+        <section class="alert alert-danger"
+            *ngIf="addCaseForm.get('person').touched && addCaseForm.get('phone').touched && addCaseForm.get('date').hasError('pattern')"
+            >
+            The date of visit is required: 'yyyy-mm-dd'.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="time">Time of Visit:</label>
+        <input type="text" formControlName="time" class="form-control" placeholder="##:##am/pm">
+        <section class="alert alert-danger"
+            *ngIf="addCaseForm.get('person').touched && addCaseForm.get('date').touched && addCaseForm.get('phone').touched && addCaseForm.get('time').hasError('pattern') " 
+            >
+            The time of visit is required: '##:## am or pm'.
+        </section>
+    </section>
+    <br>
+    <section>
+        <label for="info">Extra Information:</label>
+        <input type="text" formControlName="info" class="form-control" placeholder="Any extra info can be put here.">
+    </section>
+    <br>
+    <button [disabled] = 'addCaseForm.invalid' class="btn btn-success" type="submit">SUBMIT</button>
+</form>
+<br>

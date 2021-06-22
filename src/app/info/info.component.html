@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+           <h4>More Info</h4>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table class="table table-bordered">
+            <thead class="thead">
+                <th>Where</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                
+                <th>Person</th>
+                <th>Phone</th>
+
+                <th>Date/Time</th>
+                <th>MoreInfo</th>
+            </thead>
+            <tbody>
+                <td *ngFor="let elements of extrainfo">
+                    {{elements}}
+                </td>
+            </tbody>
+        </table>
+        <mat-card-actions>
+            <button class="btn btn-primary" mat-raised-button (click)="close()">Close</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>

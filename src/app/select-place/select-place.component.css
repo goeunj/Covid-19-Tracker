@@ -1,0 +1,17 @@
+a, .selection {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success {
+    width: 95%;
+    height: 60px;
+    font-size: larger;
+}
+
+.addPlaceButton {
+    width: 95%;
+    background-color: rgba(76, 105, 87, 0.664);
+    color: white;
+    border: 2px solid rgba(76, 105, 87, 0.664);;
+}
