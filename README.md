@@ -1,6 +1,11 @@
-# FinalA
+# Covid 19 Tracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+
+This was a school project using Angular, leaflet map API, storage server, TypeScript. The storage server has to be put in place of /*storage server*/ for the web app to work (the original storage server I worked with was taken down after the course ended because it was provided by the professor). 
+
+**one error**
+An extra row appears when I remove an existing report which is empty
 
 ## Development server
 
